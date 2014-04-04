@@ -1,3 +1,5 @@
+package net.mrinspector.friends.Friends;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map.Entry;
