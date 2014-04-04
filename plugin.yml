@@ -1,0 +1,7 @@
+name: Friends
+main: net.mrinspector.friends.Friends
+version: 1.0
+commands:
+    friend:
+     permission: friend.use
+     description: Main command for plugin 'friends'
