@@ -20,6 +20,24 @@ public class Friends extends JavaPlugin implements Listener {
 	/*
 	 * Friends plugin! owoohohoohohoohowohoo it's finally here! The best friends plugin out there.
 	 */
+	 
+	 /*
+	 * FAQ:
+	 *
+	 * Q: How can I make this code into a plugin?
+	 * A: You would need to compile this plugin, I'd just find a developer who has an IDE and can compile,
+	 * show them this github repo.
+	 *
+	 * Q: HEWLEOPEPELPE OMGOGKMGMMGMGT THIS CODE DOESN'T WORKKKK1!!?!?!?!?!?11!
+	 * A: Patience is the key, I work on this project every day, check back from time to time, if you want me
+	 * to find the bug faster, make a pull request with a note saying what the error is, put the note next to
+	 * where the error is coming.
+	 *
+	 * Q: What does this do again?
+	 * A: It's just a friends plugin, add / remove friends, accept / deny friend requests, get notified when
+	 * your friends leave / join, lots more to come.
+	 *
+	 */
 
 	public void onEnable() {
 		getConfig().options().copyDefaults(true);
@@ -75,7 +93,7 @@ public class Friends extends JavaPlugin implements Listener {
 			Player p = (Player) sender;
 			if (p.hasPermission("friend.use")) {
 				if (args.length == 0) {
-					sender.sendMessage(ChatColor.GRAY + "Usage: /friend [name]");
+					sender.sendMessage(ChatColor.RED + "Usage: /friend [name]");
 					return true;
 				}
 				Player target = Bukkit.getServer().getPlayer(args[0]);
@@ -113,6 +131,7 @@ public class Friends extends JavaPlugin implements Listener {
 					friend.put(p.getName(), target.getName());
 					p.sendMessage(ChatColor.YELLOW + "You have became friends with " + target.getName());
 					target.sendMessage(ChatColor.YELLOW + "You have became friends with " + p.getName());
+			// possible error
 				}
 					return true;
 				}
@@ -121,6 +140,14 @@ public class Friends extends JavaPlugin implements Listener {
 		if(args.length == 1) {
 			   if(args[0].equalsIgnoreCase("decline")) {
 						// TODO: Add decline feature
+						return true;
+					}
+				}
+}
+
+	if(args.length == 1) {
+			   if(args[0].equalsIgnoreCase("list")) {
+						// TODO: Add list feature
 						return true;
 					}
 				}
