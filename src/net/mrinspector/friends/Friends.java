@@ -90,7 +90,7 @@ public class Friends extends JavaPlugin implements Listener {
 			Player p = (Player) sender;
 			if (p.hasPermission("friend.use")) {
 				if (args.length == 0) {
-					sender.sendMessage(ChatColor.RED + "Usage: /friend [name]");
+					sender.sendMessage(ChatColor.RED + "Invalid Usage: " + ChatColor.GOLD + "/friend [name]");
 					return true;
 				}
 				Player target = Bukkit.getServer().getPlayer(args[0]);
@@ -123,13 +123,17 @@ public class Friends extends JavaPlugin implements Listener {
 				Player target = Bukkit.getServer().getPlayer(args[0]);
 				if(target != null) {
 					// TODO: add accept feature
+					// will add this feature as soon as i'm done with irl issues (such as being sick and hw)
 					return true;
 				}
 			}
 		
 		if(args.length == 1) {
 			   if(args[0].equalsIgnoreCase("decline")) {
+			   	Player target = Bukkit.getServer().getPlayer(args[0]);
+				if(target != null) {
 						// TODO: Add decline feature
+						// will add this feature as soon as i'm done with irl issues (such as being sick and hw)
 						return true;
 					}
 				}
@@ -138,6 +142,7 @@ public class Friends extends JavaPlugin implements Listener {
 	if(args.length == 1) {
 			   if(args[0].equalsIgnoreCase("list")) {
 						// TODO: Add list feature
+				        	// will add this feature as soon as i'm done with irl issues (such as being sick and hw)
 						return true;
 					}
 				}
