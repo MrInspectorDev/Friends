@@ -60,9 +60,6 @@ public class Friends extends JavaPlugin implements Listener {
 	
     HashMap<String, String> friend = new HashMap<String, String>();
     
-	public ArrayList<String> male = new ArrayList<String>();
-	public ArrayList<String> female = new ArrayList<String>();
-    
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent e) {
     	Player p = e.getPlayer();
@@ -125,14 +122,7 @@ public class Friends extends JavaPlugin implements Listener {
 		   if(args[0].equalsIgnoreCase("accept")) {
 				Player target = Bukkit.getServer().getPlayer(args[0]);
 				if(target != null) {
-				if (getConfig().getString(p.getName())
-						.equalsIgnoreCase(target.getName())) {
-					friend.put(target.getName(), p.getName());
-					friend.put(p.getName(), target.getName());
-					p.sendMessage(ChatColor.YELLOW + "You have became friends with " + target.getName());
-					target.sendMessage(ChatColor.YELLOW + "You have became friends with " + p.getName());
-			// possible error
-				}
+					// TODO: add accept feature
 					return true;
 				}
 			}
